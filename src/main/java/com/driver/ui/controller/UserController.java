@@ -5,6 +5,8 @@ import java.util.List;
 import com.driver.model.request.UserDetailsRequestModel;
 import com.driver.model.response.OperationStatusModel;
 import com.driver.model.response.UserResponse;
+import com.driver.service.impl.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,13 +20,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/users")
 public class UserController {
 
+	@Autowired
+	UserServiceImpl userServiceImpl;
 	@GetMapping(path = "/{id}")
 	public UserResponse getUser(@PathVariable String id) throws Exception{
 
 		return null;
 	}
 
-	@PostMapping()
+	@PostMapping("/createUser")
 	public UserResponse createUser(@RequestBody UserDetailsRequestModel userDetails) throws Exception{
 
 		return null;
@@ -42,7 +46,7 @@ public class UserController {
 		return null;
 	}
 	
-	@GetMapping()
+	@GetMapping("/getUsers")
 	public List<UserResponse> getUsers(){
 
 		return null;

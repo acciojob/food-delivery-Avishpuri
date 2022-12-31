@@ -1,5 +1,9 @@
 package com.driver.shared.dto;
 
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
 public class UserDto{
 
 	private long id;

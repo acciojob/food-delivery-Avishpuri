@@ -1,12 +1,15 @@
 package com.driver.io.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import lombok.Builder;
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+@Builder
 @Entity(name = "users")
 public class UserEntity{
 
